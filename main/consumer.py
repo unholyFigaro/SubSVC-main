@@ -1,7 +1,7 @@
 import pika, json
 from main import Product, db
 
-rmq_server = "16.171.196.128"
+rmq_server = "16.171.249.80"
 credentials = pika.PlainCredentials('guest', 'guest')
 parameters = pika.ConnectionParameters(rmq_server, 5672, '/', credentials)
 
