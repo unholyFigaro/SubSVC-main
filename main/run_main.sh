@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
 
-python manage.py migrate
-python manage.py main.py
+python manager.py db migrate
+python manager.py db upgrade
+python main.py
