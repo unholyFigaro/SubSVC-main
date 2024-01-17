@@ -1,8 +1,8 @@
 version: '3.8'
 services: 
   backend:
+    image: ec2-13-51-195-57.eu-north-1.compute.amazonaws.com:5500/main/backend
     build:
-      image: ec2-13-51-195-57.eu-north-1.compute.amazonaws.com:5500/main/backend
       context: .
       dockerfile: Dockerfile
       args:
@@ -16,8 +16,8 @@ services:
       - db
 
   queue:
+    image: ec2-13-51-195-57.eu-north-1.compute.amazonaws.com:5500/main/queue
     build:
-      image: ec2-13-51-195-57.eu-north-1.compute.amazonaws.com:5500/main/queue
       context: .
       dockerfile: Dockerfile
     command: 'python consumer.py'
