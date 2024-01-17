@@ -4,3 +4,8 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org -r requirements.txt
 COPY . /app
+
+EXPOSE 8000
+
+RUN chmod +x run_main.sh
+CMD ["/app/run_main.sh"]
