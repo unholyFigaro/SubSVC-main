@@ -8,4 +8,5 @@ COPY . /app
 EXPOSE 5000
 
 RUN chmod +x run_main.sh
-CMD ["/app/run_main.sh"]
+CMD [ "python", "flaskapi.py" ]
+#CMD ["/app/run_main.sh"]
